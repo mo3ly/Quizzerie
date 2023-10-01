@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten&family=Montserrat&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+html {
+    padding: 0;
+    margin: 0;
+    background: #f9f9f9;
+    /* background-image: linear-gradient(90deg, #ffffff 20%, #f9f9f9 20%, #f9f9f9 80%, #ffffff 80%); */
+}
+
+@layer utilities {
+    .border-3 {
+      border-width: 3px;
+    }
+
+    /* Text shadows */
+    .text-shadow-gray {
+      text-shadow: 1px 3px #303030;
+    }
+
+    /* Shadows */
+    .shadow-black-sm {
+      box-shadow: 1px 1px 0 #000000;
+    }
+    .shadow-black {
+      box-shadow: 2px 2px 0 #000000;
+    }
+    .shadow-white {
+      box-shadow: 2px 2px 0 #ffffff;
+    }
+    .shadow-yellow {
+      box-shadow: 1px 2px 0 #fcd34d;
+    }
+    .shadow-yellow-xl {
+      box-shadow: 6px 6px 0 #fcd34d;
+    }
+    .shadow-purple {
+      box-shadow: 1px 2px 0 #7443f7;
+    }
+
+    /* gradient */
+    .gradient-purple {
+      background: #6b3ed9;
+      background: linear-gradient(270deg, #6b3ed9 70%, #7443f7 30%);
+      /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  background: radial-gradient(ellipse at bottom,  #6b3ed9 0%,#6b3ed9 47%,#6b3ed9 47%,#7443f7 47%,#7443f7 48%); */
+      /* background: linear-gradient(270deg, #ff9800 70%, #ffab30 30%); */
+    }
+    .gradient-red {
+      background-color: #ee3838;
+      background: linear-gradient(140deg, #fe5556 70%, #ee3838 30%);
+    }
+    .gradient-pink {
+      background: #b4006d;
+      background: linear-gradient(140deg, #b4006d 50%, #da0783 50%);
+    }
+    .gradient-blue {
+      background: #37b2d1;
+      background: linear-gradient(90deg, #66d2ff 20%, #37b2d1 20%, #37b2d1 80%, #66d2ff 80%);
+    }
+    .gradient-yellow {
+      background-color: #fddc08;
+      background: linear-gradient(140deg, #fddc08 70%, #f7d40a 30%);
+    }
+    .gradient-green {
+      background-color: #08fd81;
+      background: linear-gradient(140deg, #08fd81 70%, #20cd75 30%);
+    }
+    .gradient-gray {
+      background-color: #303030;
+      background: linear-gradient(140deg, #303030 70%, #222222 30%);
+    }
+    .gradient-white {
+      background-color: #ffffff;
+      background: linear-gradient(140deg, #ffffff 70%, #f9f9f9 30%);
+    }
+    .gradient-white-flat {
+      background-color: #ffffff;
+      background: linear-gradient(145deg, #ffffff 95%, #f9f9f9 5%);
+    }
+}
+  
+
+@layer base {
+    [type="text"],
+    [type="email"],
+    [type="url"],
+    [type="password"],
+    [type="number"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="search"],
+    [type="tel"],
+    [type="time"],
+    [type="week"],
+    [multiple],
+    textarea,
+    select {
+      @apply sm:text-sm rounded-xl text-black border-black gradient-white-flat shadow-black-sm focus:outline-none focus:shadow-purple;
+    }
+  
+    [type="text"]:focus,
+    [type="email"]:focus,
+    [type="url"]:focus,
+    [type="password"]:focus,
+    [type="number"]:focus,
+    [type="date"]:focus,
+    [type="datetime-local"]:focus,
+    [type="month"]:focus,
+    [type="search"]:focus,
+    [type="tel"]:focus,
+    [type="time"]:focus,
+    [type="week"]:focus,
+    [multiple]:focus,
+    textarea:focus,
+    select:focus {
+      box-shadow: 1px 2px 0 #7443f7 !important;
+    }
+  
+    [type="checkbox"],
+    [type="radio"] {
+      @apply border-gray-300 rounded text-indigo-600 focus:ring-indigo-500;
+    }
+}
+
+/* fonts */
+.font-gluten{
+    font-family: "Gluten", cursive !important;
+}
+
+/* buttons */
+button.btn:active {
+    @apply focus:scale-95;
+}
+
+/* Links */
+a.left-underline, button.left-underline {
+    position: relative;
+}
+  
+a.left-underline:before, button.left-underline:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: #7443f7;
+    box-shadow: 1px 1px 0 #000 !important;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+a.left-underline:hover:before, button.left-underline:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+
+/* animation */
+
+/* from: https://play.kahoot.it/ */
+@keyframes animation-play-joined {
+  0% {
+      transform: scale(1);
+  }
+  25% {
+      transform: scale(1.5);
+  }
+  50% {
+      transform: scale(1);
+  }
+  75% {
+      transform: scale(1.25);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
