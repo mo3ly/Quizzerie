@@ -1,7 +1,10 @@
-# Quizzerie
-_A Reflection of Kahoot!_
+# Quizzerie `A Reflection of Kahoot!`
+<div align="center">
+  <img src="./quiz-demo-final.gif" width="700" style="margin: 10px;" />
+  <img src="./quiz-demo-user-sfinal.gif" width="280" style="margin: 10px;" />
+</div>
 
-![Quizzerie Host](./quzzerie-host.gif)
+
 
 ## Table of Contents
 
