@@ -41,7 +41,4 @@ Quizzerie is developed using the latest and most reliable web technologies to en
 - Creating a robust database schema.
 - Building an API to process and serve the interface with data based on specific requests.
 
----
-
-For more information, feel free to contact us.
 
